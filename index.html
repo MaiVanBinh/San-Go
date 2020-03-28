@@ -3,36 +3,206 @@
     <head>
         <meta charset="UTF-8">
         <title>Sàn gỗ Huy Phát</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="style/index.css">
-        <script src="https://kit.fontawesome.com/64f7335d5d.js" crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.search-icon').click(function(){
+                    $('.search').slideToggle()
+                }) 
+                $('.close').click(function(){
+                    $('.search').slideToggle()
+                })
+            })
+        </script>
     </head>
     <body>
         <!-- navbar -->
-        <nav id="navbar">
-            <a href="#" class="logo">Logo</a>
-            <ul>
-                <li><a href="#home" onclick="toggle()">Trang chủ</a></li>
-                <li><a href="#products" onclick="toggle()">Sản phẩm</a></li>
-                <li><a href="#services" onclick="toggle()">Dịch vụ</a></li>
-                <li><a href="#trend" onclick="toggle()">Xu hướng</a></li>
-                <li><a href="#about" onclick="toggle()">Về chúng tôi</a></li>
-                <li><a href="#contact" onclick="toggle()">Liên hệ</a></li>
-            </ul>
-            <div class="toggle" onclick="toggle()"></div>
-        </nav>
-        <!-- Banner -->
-        <section class="banner" id="home">
-            <h2>Chất lượng <br><span>làm nên</span> Thương hiệu</h2>
-        </section>
-        <!--Nhà cung cấp, loại sản  phẩm ...-->
-        <section class="sec work">
-            <div class="content">
-                <div class="mxw800p">
-                    <h3 style="text-align:center;">Chúng tôi có gì?</h3>
+        <div id="nav">
+            <div class="full-width search">
+                <div class="search-form">
+                    <input type="text" name="" placeholder="Search...">
+                    <div class="close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
-        </section>       
+            <nav id="navbar">
+                <a href="#" class="logo">Logo</a>
+                <ul>
+                    <li><a href="index.html" onclick="toggle()"><span>Trang chủ</span></a></li>
+                    <li><a href="products.html" onclick="toggle()"><span>Sản phẩm</span></a></li>
+                    <li><a href="services.html" onclick="toggle()"><span>Dịch vụ</span></a></li>
+                    <li><a href="trend.html" onclick="toggle()"><span>Xu hướng</span></a></li>
+                    <li><a href="about.html" onclick="toggle()"><span>Về chúng tôi</span></a></li>
+                    <li><a href="contact.html" onclick="toggle()"><span>Liên hệ</span></a></li>
+                    <li>
+                        <a href="#" class="search-icon">
+                            <span>
+                                <i class="fa fa-search"style="font-size:20px;" onclick="toggle()"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="toggle" onclick="toggle()"></div>
+            </nav>
+        </div>
+        
+        <!-- Banner -->
+        <div id="banner">
+            <section class="banner" id="home">
+                <h2>Chất lượng <br><span>làm nên</span> Thương hiệu</h2>
+            </section>
+        </div>
+        <!--Color-->
+        <section class="secType work">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Màu Sắc</h3>
+                </div>
+                <div class="colorBx">
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/color_dark.png" alt="color dark"></a>
+                        </div>
+                        <div class="details">
+                            <p>Dark</p>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/color_gray.png" alt="color gray"></a>
+                        </div>
+                        <div class="details">
+                            <p>Gray</p>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/color_high_variation.png" alt="color high variation"></a>
+                        </div>
+                        <div class="details">
+                            <p>High variation</p>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/color_light.png" alt="color light"></a>
+                        </div>
+                        <div class="details">
+                            <p>Light</p>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/color_medium.png" alt="color medium"></a>
+                        </div>
+                        <div class="details">
+                            <p>Medium</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Species-->
+        <section class="secType work">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Chất liệu</h3>
+                </div>
+                <div class="speciesBx">
+                    <div class="species">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/soi.png" alt="Sồi"></a>
+                        </div>
+                        <div class="details">
+                            <p>Sồi</p>
+                        </div>
+                    </div>
+                    <div class="species">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/soi.png" alt="Sồi"></a>
+                        </div>
+                        <div class="details">
+                            <p>Sồi</p>
+                        </div>
+                    </div>
+                    <div class="species">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/soi.png" alt="Sồi"></a>
+                        </div>
+                        <div class="details">
+                            <p>Sồi</p>
+                        </div>
+                    </div>
+                    <div class="species">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/soi.png" alt="Sồi"></a>
+                        </div>
+                        <div class="details">
+                            <p>Sồi</p>
+                        </div>
+                    </div>
+                    <div class="species">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/soi.png" alt="Sồi"></a>
+                        </div>
+                        <div class="details">
+                            <p>Sồi</p>
+                        </div>
+                    </div>
+                    <div class="species">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/soi.png" alt="Sồi"></a>
+                        </div>
+                        <div class="details">
+                            <p>Sồi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Thương hiệu -->
+        <section class="secType work">
+            <div class="content">
+                <div class="mxw800p">
+                    <h3>Thương hiệu</h3>
+                </div>
+                <div class="colorBx">
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/mylogo.PNG" alt="mvb"></a>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/mylogo.PNG" alt="mvb"></a>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/mylogo.PNG" alt="mvb"></a>
+                        </div>
+                    </div>
+                    <div class="color">
+                        <div class="imgbox">
+                            <a href="#"><img src="images/mylogo.PNG" alt="mvb"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
         <!--Stats-->
         <section class="sec stats">
             <div class="content">
@@ -727,19 +897,21 @@
                         <li><a href="#"><img src="images/linkedin.png" alt=""></a></li>
                     </ul>
                 </div>
+                <h3>Sàn Gỗ Huy Phát</h3>
+                <p>Địa chỉ: <a href="https://www.google.com/maps/place/HCMC+National+University+Dormitory+Zone+B/@10.8830067,106.7795138,17z/data=!3m1!4b1!4m5!3m4!1s0x3174d885564f40f1:0x69ba5a55a3ec0e6f!8m2!3d10.8830014!4d106.7817025?hl=vi-VN">74 Tô Vĩnh Diện, thị xã Dĩ An, tình Bình Dương</a></p>
                 <p class="copyright">Design & Developed By <a href="#">MVB</a></p>
             </div>
         </section>
+        
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
                 var header = document.querySelector("nav");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
             function toggle(){
-                var header = document.querySelector("nav");
-                header.classList.toggle("active");
+                var nav = document.querySelector("nav");
+                nav.classList.toggle("active");
             }
         </script>
-        
     </body>
 </html>

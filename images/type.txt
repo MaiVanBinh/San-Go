@@ -1,0 +1,9 @@
+Color
+	light
+	Medium
+	Dark
+	High Variation
+	Gray
+Type
+species
+Brand

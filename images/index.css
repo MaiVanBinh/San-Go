@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-@import url('../images/fontawesome-free-5.13.0-web/css/all.css');
-
 *
 {
     margin: 0;
@@ -14,53 +12,9 @@ html{
 body{
     min-height: 1000px;
 }
-/*Search*/
-.full-width{
-    width: 100%;
-    box-sizing: border-box;
-}
-.full-width.search{
-    position: relative;
-    background: #000;
-    padding: 10px 100px;
-    display: none;
-}
-.search-form{
-    position: relative;
-    padding-left: 20px;
-}
-.search-form:before{
-    content:  "\f002";
-    position: absolute;
-    top: 0;
-    color: #fff;
-    font-family: fontAwesome;
-    top: 7px;
-    left: 0;
-}
-.search-form ::placeholder{
-    color: #fff;
-}
-.search-form input{
-    width: 100%;
-    height: 30px;
-    background: none;
-    border: none;
-    outline: none;
-    color: #fff;
-
-}
-.close{
-    color: #fff;
-    position: absolute;
-    top: 8px;
-    right: 0;
-    cursor: pointer;
-}
-/*Navbar*/
 nav{
     position: fixed;
-    top: 100;
+    top: 0;
     left: 0;
     width: 100%;
     display: flex;
@@ -71,7 +25,6 @@ nav{
     transition: 0.6s;
 }
 nav.sticky{
-    top: 0;
     padding: 5px 100px;
     background: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -82,14 +35,6 @@ nav .logo{
     color: #fff;
     text-decoration: none;
     font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.6s;
-}
-nav i{
-    position: relative;
-    font-weight: 700;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
@@ -110,69 +55,11 @@ nav ul li a{
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
-    font-weight: 300;
+    font-weight: 300px;
     transition: 0.6s;
 }
-nav ul li a:before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ffa45c;
-    transition: all 0.3s 0.2s ease;
-    left: 0;
-    top: -7px;
-}
-nav ul li a:after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #ffa45c;
-    transition: all 0.3s ease;
-    right: 0;
-    bottom: -7px;
-}
-nav ul li a span:before{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 0;
-    background-color: #ffa45c;
-    transition: all 0.3s 0.4s ease;
-    right: -7px;
-    top: 0;
-}
-nav ul li a span:after{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 0;
-    background-color: #ffa45c;
-    transition: all 0.3s ease;
-    left: -7px;
-    bottom: 0;
-}
-nav ul li a:hover{
-    color: #ffa45c;
-    letter-spacing: 2px;
-
-}
-nav ul li a:hover:before,
-nav ul li a:hover:after{
-    width: 100%;
-
-}
-nav ul li a:hover span{
-    z-index: 1;
-}
-nav ul li a:hover span:before,
-nav ul li a:hover span:after{
-    height: 100%;
-}
 nav.sticky .logo,
-nav.sticky ul li a,
-nav.sticky ul li i
+nav.sticky ul li a
 {
     color: #000;
 
@@ -213,7 +100,6 @@ nav.sticky ul li i
 .mxw800p{
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 h3{
     font-size: 40px;
@@ -227,103 +113,13 @@ p{
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
-/*Type*/
-.secType{
-    background: #fff;
-    padding: 30px;
-    min-height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.secType .content{
-    position: relative;
-    width: 100%;
-}
-/*Color Type*/
-.colorBx{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-gap: 10px;
-    max-width: 100%;
-    margin-top: 40px;
-}
-.colorBx .color{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 200px;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    overflow: hidden;
-}
-.colorBx .color:hover{
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-.colorBx .color .imgbox{
-    margin-top: 7px;
-    height: 100%;
-    box-sizing: border-box;
-}
-.colorBx .color .imgbox img{
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    height: 100%;
-}
-.colorBx .color .details{
-    text-align: center;
-}
-/*Chất liệu*/
-.speciesBx{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 10px;
-    max-width: 100%;
-    margin-top: 40px;
-}
-.speciesBx .species{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    overflow: hidden;
-}
-.speciesBx .species:hover{
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-.speciesBx .species .imgbox{
-    margin-top: 7px;
-    height: 100%;
-    box-sizing: border-box;
-}
-.speciesBx .species .imgbox img{
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    height: 80%;
-}
-.speciesBx .species .details{
-    text-align: center;
-}
-.speciesBx .species .details p{
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    letter-spacing: 2px;
-    width: 100%;
-}
+
+
 /*Product*/
+.work .content h3{
+    text-align: center;
+}
+
 .workBx{
     position: relative;
     display: grid;
@@ -340,7 +136,7 @@ p{
     width: 240px;
     height: 340px;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -409,13 +205,12 @@ p{
 /*status*/
 .stats{
     background: #000;
-    padding-top: 150px;
-    margin-top: -100px;
+    padding-top: 250px;
+    margin-top: -250px;
     text-align: center;
 }
 .stats h3,
-.stats p,
-.stats a{
+.stats p{
     color: #fff;
 }
 .statsBox{
@@ -443,13 +238,8 @@ p{
     text-align: center;
 }
 .contact h3,
-.contact p,
-.contact a{
+.contact p{
     color: #fff;
-    text-decoration: none0;
-}
-.contact a:hover{
-    opacity: 0.5;
 }
 .contactForm{
     position: relative;
@@ -563,7 +353,6 @@ p{
     }
     nav,
     nav.sticky{
-        height: 59px;
         padding: 5px 50px;
         background: #fff;
     }
@@ -713,4 +502,3 @@ transition-delay:0.25s;
     transition:1s;
     transition-delay:0.75s;
 }
-
